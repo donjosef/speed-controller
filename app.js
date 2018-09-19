@@ -14,5 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 control.addEventListener("mousemove", function(e) {
   const x = e.pageX - this.offsetLeft; //position of mouse relative to bar
   const percent = x / this.offsetWidth; //between 0 and 1
+  const speed = Number(percent * 4).toFixed(1);
+  bar.textContent = speed + "x";
   bar.style.width = percent * 100 + "%";
 });
