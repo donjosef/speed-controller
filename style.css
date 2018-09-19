@@ -15,9 +15,6 @@ body {
   text-align: center;
 }
 
-.video_section {
-  min-height: 400px;
-}
 .container video {
   width: 100%;
 }
@@ -63,4 +60,26 @@ body {
 .prev:hover,
 .next:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 745px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 660px) {
+  .controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .control {
+    width: 100%;
+  }
+
+  .changeVideo {
+    width: 100%;
+    justify-content: center;
+  }
+
 }
