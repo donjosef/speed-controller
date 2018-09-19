@@ -19,3 +19,31 @@ control.addEventListener("mousemove", function(e) {
   bar.textContent = speed + "x";
   bar.style.width = percent * 100 + "%";
 });
+
+const changeVideo = (function() {
+  let index = 0;
+  return {
+    next: function() {
+      if(index < videos.length - 1 ) {
+        index++;
+        console.log(index)
+        const src = videos[index].sources.join();
+        console.log(src);
+        videoTag.src = src;
+
+      }
+    },
+    prev: function() {
+      if(index > 0) {
+          index--;
+          console.log(index)
+          const src = videos[index].sources.join();
+          console.log(src);
+          videoTag.src = src;
+      }
+    }
+  };
+})();
+
+document.querySelector(".next").addEventListener("click", () => changeVideo.next());
+document.querySelector(".prev").addEventListener("click", () => changeVideo.prev());
