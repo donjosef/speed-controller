@@ -19,8 +19,12 @@ body {
   width: 100%;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
 .control {
-  width: 100%;
+  width: 78%;
   height: 50px;
   border-radius: 10px;
   border: 2px solid red;
@@ -34,4 +38,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.changeVideo {
+  width: 20%;
+  height: 50px;
+  display: flex;
+  justify-content:  space-between;
+}
+
+.prev,
+.next {
+  background: none;
+  color: #444;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prev:hover,
+.next:hover {
+  text-decoration: underline;
 }
